@@ -23,3 +23,4 @@ django-sample-app*/
 .pypirc
 migrations/
 .vscode/
+__pycache__
