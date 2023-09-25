@@ -25,14 +25,14 @@ repos:
       rev: v2.0.4
       hooks:
           - id: autopep8
-            # args: [--ignore=["F403","F405","F401","E501","W503"], max_line_length=200]
             stages: [commit]
 
     - repo: https://github.com/PyCQA/flake8
       rev: 6.1.0
       hooks:
           - id: flake8
-            stages: [push]
+            args: ["--ignore=F403,F405,F401,E501,W503"]
+            stages: [commit]
 
     - repo: local
       hooks:

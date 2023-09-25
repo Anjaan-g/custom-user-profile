@@ -24,20 +24,30 @@ CONTACT_CHOICES = (
 class CustomUserCreationForm(UserCreationForm):
     first_name = forms.CharField(
         label="First Name",
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter First Name"}),
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Enter First Name"}
+        ),
         required=True,
     )
     last_name = forms.CharField(
         label="Last Name",
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter Last Name"}),
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Enter Last Name"}
+        ),
         required=True,
     )
     email = forms.CharField(
-        widget=forms.EmailInput(attrs={"class": "form-control", "placeholder": "eg. example@example.com"}),
+        widget=forms.EmailInput(
+            attrs={"class": "form-control",
+                   "placeholder": "eg. example@example.com"}
+        ),
         required=True,
     )
     phone = forms.CharField(
-        widget=forms.NumberInput(attrs={"class": "form-control", "placeholder": "eg. +977-98XXXXXXXX"}),
+        widget=forms.NumberInput(
+            attrs={"class": "form-control",
+                   "placeholder": "eg. +977-98XXXXXXXX"}
+        ),
         required=True,
     )
     gender = forms.ChoiceField(
@@ -45,11 +55,16 @@ class CustomUserCreationForm(UserCreationForm):
         required=True,
     )
     address = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "eg. Street 1, City"}),
+        widget=forms.TextInput(
+            attrs={"class": "form-control",
+                   "placeholder": "eg. Street 1, City"}
+        ),
         required=True,
     )
     nationality = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "eg. Nepali"}),
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "eg. Nepali"}
+        ),
         required=True,
     )
     date_of_birth = forms.DateField(
@@ -58,7 +73,9 @@ class CustomUserCreationForm(UserCreationForm):
         required=True,
     )
     education = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "eg. Bachelors"}),
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "eg. Bachelors"}
+        ),
         required=True,
     )
     contact_mode = forms.ChoiceField(
@@ -96,7 +113,9 @@ class CustomUserCreationForm(UserCreationForm):
         self.helper.form_show_errors = True
         self.helper.layout = Layout(
             Row(
-                Column("first_name", prepend_text="@", css_class="form-group col-md-6 mb-0"),
+                Column(
+                    "first_name", prepend_text="@", css_class="form-group col-md-6 mb-0"
+                ),
                 Column("last_name", css_class="form-group col-md-6 mb-0"),
                 css_class="form-row",
             ),
@@ -173,8 +192,12 @@ class CustomAuthenticationForm(AuthenticationForm):
             Submit("submit", "login"),
         )
 
-    username = forms.EmailField(label="Username/Email", widget=forms.TextInput(attrs={"class": "form-control"}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={"class": "form-control"}))
+    username = forms.EmailField(
+        label="Username/Email", widget=forms.TextInput(attrs={"class": "form-control"})
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={"class": "form-control"})
+    )
 
     class Meta:
         fields = (
