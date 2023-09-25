@@ -22,3 +22,4 @@ django-sample-app*/
 *.sqlite3
 .pypirc
 migrations/
+.vscode/
