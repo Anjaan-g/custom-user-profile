@@ -22,7 +22,6 @@ class CustomUserTestCase(TestCase):
     def test_create_superuser(self) -> None:
         print("Testing: Create SuperUser")
         user = CustomUser.objects.create_superuser(
-            "testsuperuser@test.com", "superpass"
-        )
+            "testsuperuser@test.com", "superpass")
         self.assertEqual(user.email, "testsuperuser@test.com")
         self.assertTrue(user.is_superuser)

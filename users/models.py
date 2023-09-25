@@ -31,12 +31,10 @@ class CustomUser(AbstractUser):
     address = models.CharField(_("Address"), max_length=254)
     nationality = models.CharField(_("Nationality"), max_length=50)
     date_of_birth = models.DateField(
-        _("Date of Birth"), auto_now=False, auto_now_add=False, blank=True, null=True
-    )
+        _("Date of Birth"), auto_now=False, auto_now_add=False, blank=True, null=True)
     education = models.CharField(_("Education Background"), max_length=50)
     contact_mode = models.CharField(
-        _("Prefered Contact Mode"), max_length=50, choices=CONTACT_CHOICES
-    )
+        _("Prefered Contact Mode"), max_length=50, choices=CONTACT_CHOICES)
     is_admin = models.BooleanField(_("Admin"), default=False)
     archive = models.BooleanField(_("Archive"), default=False)
 
