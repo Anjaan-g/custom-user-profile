@@ -1,6 +1,6 @@
 # Custom User Profile
 
-[![Upload to PyPi](https://github.com/Anjaan-g/custom-user-profile/actions/workflows/python-publish.yml/badge.svg?branch=main)](https://github.com/Anjaan-g/custom-user-profile/actions/workflows/python-publish.yml)
+[![Build](https://github.com/Anjaan-g/custom-user-profile/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Anjaan-g/custom-user-profile/actions/workflows/python-publish.yml)
 
 Custom User Profile is a django app to create custom user model with the ability to register
 new users with custom forms and rich stylings.
