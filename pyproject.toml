@@ -14,6 +14,9 @@ profile = "black"
 line_length = 120
 skip_gitignore = true
 
+[tool.autopep8]
+max-line-length=120
+
 [tool.black]
 line-length = 120
 exclude = '''
