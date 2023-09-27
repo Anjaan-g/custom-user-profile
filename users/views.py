@@ -31,13 +31,13 @@ class MyLoginView(LoginView):
             print("Authenticated user:", user)
             print("Redirecting to 'home'")
             login(self.request, user)
-            return redirect("home")
+            return redirect("users:home")
         else:
             print("User authentication failed or user is inactive")
             return self.form_invalid(form)
 
     def get_success_url(self):
-        return reverse("home")  # Ensure 'home' is the correct URL name
+        return reverse("users:home")  # Ensure 'home' is the correct URL name
 
     def form_invalid(self, form):
         print("Form is invalid")  # Check if this is called for invalid forms
@@ -95,7 +95,7 @@ class UserEditView(UpdateView):
     model = CustomUser
     form_class = CustomUserChangeForm
     template_name = "users/user_edit.html"
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("users:user_list")
 
 
 class UserDeleteView(View):

@@ -13,7 +13,6 @@
 {% endblock title %}
 
 {% block content %}
-
     <div class="container ">
         <div class="card flex flex-col justify-center align-items-center mt-20 ">
             <form method="post" class="d-flex flex-column">
@@ -23,7 +22,7 @@
             <br>
             <div class="col-md-6 card-body">
                 <p>Don't have an account?</p>
-                <a href="{% url 'user_register' %}"> Register</a>
+                <a href="{% url 'users:user_register' %}"> Register</a>
             </div>
         </div>
     </div>
