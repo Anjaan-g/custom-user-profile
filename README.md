@@ -9,12 +9,14 @@ Detailed documentation is in the 'docs' directory.
 
 ## Quick Start
 
-1. Add 'users' to your INSTALLED_APPS setting like this:
+1. Add 'users' to your INSTALLED_APPS settings. This project uses django-crispy-forms and crispy-bootstrap5 packages which also needs to be added in the installed apps.
 
 ```python
 INSTALLED_APPS = [
     ...,
     'users',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 ```
 
